@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-espresso: #352A1A;
+  --color-warm-brown: #5F492E;
+  --color-gold: #96805C;
+  --color-olive: #706033;
+  --color-sand: #C0A184;
+  --color-ivory: #F4EDE6;
+
+  --font-display-ar: "Amiri", Georgia, serif;
+  --font-body-ar: "Tajawal", system-ui, sans-serif;
+  --font-display-en: "Cormorant Garamond", Georgia, serif;
+  --font-body-en: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: #352A1A;
+    color: #F4EDE6;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid #C0A184;
+    outline-offset: 3px;
+  }
+}
+
+/* Font switching by document language */
+html[lang="ar"] body {
+  font-family: var(--font-body-ar);
+}
+
+html[lang="en"] body {
+  font-family: var(--font-body-en);
+}
+
+html[lang="ar"] .font-clinic-display {
+  font-family: var(--font-display-ar);
+}
+
+html[lang="en"] .font-clinic-display {
+  font-family: var(--font-display-en);
+}
+
+/* Golden character-by-character shimmer reveal for Arabic (preserves cursive ligatures) */
+@keyframes reveal-rtl {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0%);
+  }
+}
+
+@keyframes reveal-ltr {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+@keyframes gold-beam-rtl {
+  0% {
+    transform: translateX(65%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-115%);
+    opacity: 0;
+  }
+}
+
+@keyframes gold-beam-ltr {
+  0% {
+    transform: translateX(-65%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(115%);
+    opacity: 0;
+  }
+}
+
+@keyframes char-gold-glint {
+  0% {
+    opacity: 0;
+    color: #C0A184;
+    text-shadow: 0 0 18px rgba(192, 161, 132, 0.75);
+  }
+  55% {
+    opacity: 1;
+    color: #F4EDE6;
+    text-shadow: 0 0 14px rgba(150, 128, 92, 0.55);
+  }
+  100% {
+    opacity: 1;
+    color: #F4EDE6;
+    text-shadow: none;
+  }
+}
+
+/* Golden shimmer line sweep on CTA hover */
+.gold-shimmer-btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 200ms ease;
+}
+
+.gold-shimmer-btn::after {
+  content: "";
+  position: absolute;
+  inset: -40% auto -40% -70%;
+  width: 55%;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(244, 237, 230, 0.08) 32%,
+    rgba(244, 237, 230, 0.52) 50%,
+    rgba(192, 161, 132, 0.2) 65%,
+    transparent 100%
+  );
+  transform: translateX(-120%) skewX(-18deg);
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.gold-shimmer-btn:hover::after,
+.gold-shimmer-btn:focus-visible::after {
+  transform: translateX(420%) skewX(-18deg);
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #352A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5F492E;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #96805C;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .gold-shimmer-btn::after {
+    display: none;
+  }
+}
