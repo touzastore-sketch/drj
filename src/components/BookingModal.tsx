@@ -59,7 +59,7 @@ export function BookingModal({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#4B366D]/45 backdrop-blur-sm"
+            className="fixed inset-0 bg-[#254736]/40 backdrop-blur-sm"
           />
 
           <motion.div
@@ -67,17 +67,17 @@ export function BookingModal({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.98 }}
             transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
-            className="relative z-10 max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-sm border border-[#C7B6DF] bg-gradient-to-br from-[#FAF7FD] via-[#F3EDF9] to-[#E9DFF5] p-6 shadow-2xl md:p-8"
+            className="relative z-10 max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-sm border border-[#BDDAC6] bg-gradient-to-br from-[#F7FCF9] via-[#EEF7F1] to-[#E2F1E7] p-6 shadow-2xl md:p-8"
           >
-            <div className="mb-5 flex items-start justify-between gap-4 border-b border-[#C7B6DF] pb-4">
+            <div className="mb-5 flex items-start justify-between gap-4 border-b border-[#BDDAC6] pb-4">
               <div>
                 <h2
                   id="booking-modal-title"
-                  className="font-clinic-display text-2xl font-bold text-[#4B366D]"
+                  className="font-clinic-display text-2xl font-bold text-[#254736]"
                 >
                   {copy.modalTitle}
                 </h2>
-                <p className="mt-1 text-xs leading-relaxed text-[#664E88] md:text-sm">
+                <p className="mt-1 text-xs leading-relaxed text-[#466B57] md:text-sm">
                   {copy.modalSubtitle}
                 </p>
               </div>
@@ -86,7 +86,7 @@ export function BookingModal({
                 type="button"
                 onClick={onClose}
                 aria-label={isRtl ? 'إغلاق نافذة الحجز' : 'Close booking dialog'}
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#664E88] transition-colors hover:border-[#7C58B8] hover:text-[#4B366D] cursor-pointer"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-[#BDDAC6] bg-[#F7FCF9] text-[#466B57] transition-colors hover:border-[#45805E] hover:text-[#254736] cursor-pointer"
               >
                 <X className="h-5 w-5" aria-hidden="true" />
               </button>

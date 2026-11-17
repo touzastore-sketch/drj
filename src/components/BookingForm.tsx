@@ -83,44 +83,44 @@ export function BookingForm({
 
   if (submitted) {
     return (
-      <div className="rounded-sm border border-[#7C58B8]/60 bg-[#FAF7FD] p-5 text-start md:p-6">
+      <div className="rounded-sm border border-[#45805E]/60 bg-[#F7FCF9] p-5 text-start md:p-6">
         <div className="flex items-start gap-3">
-          <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#7C58B8]" aria-hidden="true" />
+          <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#45805E]" aria-hidden="true" />
           <div>
-            <h3 className="font-clinic-display text-xl font-bold text-[#4B366D]">
+            <h3 className="font-clinic-display text-xl font-bold text-[#254736]">
               {copy.confirmedTitle}
             </h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-[#664E88]">
+            <p className="mt-1.5 text-sm leading-relaxed text-[#466B57]">
               {copy.confirmedBody}
             </p>
           </div>
         </div>
 
-        <dl className="mt-4 space-y-1.5 border-t border-[#C7B6DF] pt-4 text-xs text-[#4B366D] md:text-sm">
+        <dl className="mt-4 space-y-1.5 border-t border-[#BDDAC6] pt-4 text-xs text-[#254736] md:text-sm">
           <div className="flex flex-wrap gap-2">
-            <dt className="font-medium text-[#7A57AB]">{copy.serviceLabel}:</dt>
+            <dt className="font-medium text-[#4B7A60]">{copy.serviceLabel}:</dt>
             <dd className="font-semibold">{serviceTitle}</dd>
           </div>
           <div className="flex flex-wrap gap-2">
-            <dt className="font-medium text-[#7A57AB]">{copy.nameLabel.replace(' *', '')}:</dt>
+            <dt className="font-medium text-[#4B7A60]">{copy.nameLabel.replace(' *', '')}:</dt>
             <dd>{patientName}</dd>
           </div>
           <div className="flex flex-wrap gap-2">
-            <dt className="font-medium text-[#7A57AB]">{copy.patientPhoneLabel.replace(' *', '')}:</dt>
+            <dt className="font-medium text-[#4B7A60]">{copy.patientPhoneLabel.replace(' *', '')}:</dt>
             <dd dir="ltr" className="tabular-nums">
               {patientPhone}
             </dd>
           </div>
           {preferredDate && (
             <div className="flex flex-wrap gap-2">
-              <dt className="font-medium text-[#7A57AB]">{copy.dateLabel}:</dt>
+              <dt className="font-medium text-[#4B7A60]">{copy.dateLabel}:</dt>
               <dd dir="ltr" className="tabular-nums">
                 {preferredDate}
               </dd>
             </div>
           )}
           <div className="flex flex-wrap gap-2">
-            <dt className="font-medium text-[#7A57AB]">{copy.timeLabel}:</dt>
+            <dt className="font-medium text-[#4B7A60]">{copy.timeLabel}:</dt>
             <dd>{preferredTime}</dd>
           </div>
         </dl>
@@ -140,7 +140,7 @@ export function BookingForm({
           <button
             type="button"
             onClick={() => setSubmitted(false)}
-            className="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-[#B49FD3] bg-[#F3EDF9] px-4 py-2.5 text-xs font-medium text-[#664E88] transition-colors hover:border-[#7C58B8] hover:text-[#4B366D] cursor-pointer"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-sm border border-[#A4CCB2] bg-[#EEF7F1] px-4 py-2.5 text-xs font-medium text-[#466B57] transition-colors hover:border-[#45805E] hover:text-[#254736] cursor-pointer"
           >
             {copy.editBooking}
           </button>
@@ -155,7 +155,7 @@ export function BookingForm({
         <div>
           <label
             htmlFor={`${idPrefix}-name`}
-            className="mb-1.5 block text-xs font-medium text-[#664E88]"
+            className="mb-1.5 block text-xs font-medium text-[#466B57]"
           >
             {copy.nameLabel}
           </label>
@@ -171,21 +171,21 @@ export function BookingForm({
             }}
             placeholder={copy.namePlaceholder}
             aria-invalid={Boolean(errors.name)}
-            className={`min-h-[44px] w-full rounded-sm border bg-[#FAF7FD] px-3.5 py-2.5 text-sm text-[#4B366D] placeholder:text-[#664E88]/50 transition-colors focus:outline-none ${
+            className={`min-h-[44px] w-full rounded-sm border bg-[#F7FCF9] px-3.5 py-2.5 text-sm text-[#254736] placeholder:text-[#466B57]/50 transition-colors focus:outline-none ${
               errors.name
-                ? 'border-[#B43B5C] focus:border-[#B43B5C]'
-                : 'border-[#C7B6DF] focus:border-[#7C58B8]'
+                ? 'border-[#B94A48] focus:border-[#B94A48]'
+                : 'border-[#BDDAC6] focus:border-[#45805E]'
             }`}
           />
           {errors.name && (
-            <p className="mt-1 text-xs font-medium text-[#B43B5C]">{errors.name}</p>
+            <p className="mt-1 text-xs font-medium text-[#B94A48]">{errors.name}</p>
           )}
         </div>
 
         <div>
           <label
             htmlFor={`${idPrefix}-phone`}
-            className="mb-1.5 block text-xs font-medium text-[#664E88]"
+            className="mb-1.5 block text-xs font-medium text-[#466B57]"
           >
             {copy.patientPhoneLabel}
           </label>
@@ -202,14 +202,14 @@ export function BookingForm({
             }}
             placeholder={copy.patientPhonePlaceholder}
             aria-invalid={Boolean(errors.phone)}
-            className={`min-h-[44px] w-full rounded-sm border bg-[#FAF7FD] px-3.5 py-2.5 text-sm text-[#4B366D] placeholder:text-[#664E88]/50 transition-colors focus:outline-none ${
+            className={`min-h-[44px] w-full rounded-sm border bg-[#F7FCF9] px-3.5 py-2.5 text-sm text-[#254736] placeholder:text-[#466B57]/50 transition-colors focus:outline-none ${
               errors.phone
-                ? 'border-[#B43B5C] focus:border-[#B43B5C]'
-                : 'border-[#C7B6DF] focus:border-[#7C58B8]'
+                ? 'border-[#B94A48] focus:border-[#B94A48]'
+                : 'border-[#BDDAC6] focus:border-[#45805E]'
             }`}
           />
           {errors.phone && (
-            <p className="mt-1 text-xs font-medium text-[#B43B5C]">{errors.phone}</p>
+            <p className="mt-1 text-xs font-medium text-[#B94A48]">{errors.phone}</p>
           )}
         </div>
       </div>
@@ -218,7 +218,7 @@ export function BookingForm({
         <div>
           <label
             htmlFor={`${idPrefix}-service`}
-            className="mb-1.5 block text-xs font-medium text-[#664E88]"
+            className="mb-1.5 block text-xs font-medium text-[#466B57]"
           >
             {copy.serviceLabel}
           </label>
@@ -226,7 +226,7 @@ export function BookingForm({
             id={`${idPrefix}-service`}
             value={selectedService?.id ?? ''}
             onChange={(e) => onChangeServiceId(e.target.value ? e.target.value : null)}
-            className="min-h-[44px] w-full rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] px-3.5 py-2.5 text-sm text-[#4B366D] transition-colors focus:border-[#7C58B8] focus:outline-none"
+            className="min-h-[44px] w-full rounded-sm border border-[#BDDAC6] bg-[#F7FCF9] px-3.5 py-2.5 text-sm text-[#254736] transition-colors focus:border-[#45805E] focus:outline-none"
           >
             <option value="">{copy.servicePlaceholder}</option>
             {services.map((item) => (
@@ -240,7 +240,7 @@ export function BookingForm({
         <div>
           <label
             htmlFor={`${idPrefix}-date`}
-            className="mb-1.5 block text-xs font-medium text-[#664E88]"
+            className="mb-1.5 block text-xs font-medium text-[#466B57]"
           >
             {copy.dateLabel}
           </label>
@@ -251,13 +251,13 @@ export function BookingForm({
             min={todayIso}
             value={preferredDate}
             onChange={(e) => setPreferredDate(e.target.value)}
-            className="min-h-[44px] w-full rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] px-3.5 py-2.5 text-sm text-[#4B366D] transition-colors focus:border-[#7C58B8] focus:outline-none [color-scheme:light]"
+            className="min-h-[44px] w-full rounded-sm border border-[#BDDAC6] bg-[#F7FCF9] px-3.5 py-2.5 text-sm text-[#254736] transition-colors focus:border-[#45805E] focus:outline-none [color-scheme:light]"
           />
         </div>
       </div>
 
       <div>
-        <span className="mb-2 block text-xs font-medium text-[#664E88]">
+        <span className="mb-2 block text-xs font-medium text-[#466B57]">
           {copy.timeLabel}
         </span>
         <div className="flex flex-wrap gap-2">
@@ -270,8 +270,8 @@ export function BookingForm({
                 onClick={() => setPreferredTimeIdx(idx)}
                 className={`min-h-[40px] rounded-sm px-3.5 py-2 text-xs transition-colors cursor-pointer ${
                   active
-                    ? 'border border-[#7C58B8] bg-[#7C58B8] text-[#FAF7FD] font-medium'
-                    : 'border border-[#C7B6DF] bg-[#FAF7FD] text-[#664E88] hover:border-[#7C58B8] hover:text-[#4B366D]'
+                    ? 'border border-[#45805E] bg-[#45805E] text-[#F7FCF9] font-medium'
+                    : 'border border-[#BDDAC6] bg-[#F7FCF9] text-[#466B57] hover:border-[#45805E] hover:text-[#254736]'
                 }`}
               >
                 {option}
@@ -284,7 +284,7 @@ export function BookingForm({
       <div>
         <label
           htmlFor={`${idPrefix}-notes`}
-          className="mb-1.5 block text-xs font-medium text-[#664E88]"
+          className="mb-1.5 block text-xs font-medium text-[#466B57]"
         >
           {copy.notesLabel}
         </label>
@@ -294,7 +294,7 @@ export function BookingForm({
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           placeholder={copy.notesPlaceholder}
-          className="min-h-[44px] w-full rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] px-3.5 py-2.5 text-sm text-[#4B366D] placeholder:text-[#664E88]/50 transition-colors focus:border-[#7C58B8] focus:outline-none"
+          className="min-h-[44px] w-full rounded-sm border border-[#BDDAC6] bg-[#F7FCF9] px-3.5 py-2.5 text-sm text-[#254736] placeholder:text-[#466B57]/50 transition-colors focus:border-[#45805E] focus:outline-none"
         />
       </div>
 

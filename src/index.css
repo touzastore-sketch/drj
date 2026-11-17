@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-lavender-canvas: #F3EDF9;
-  --color-lavender-mist: #E9DFF5;
-  --color-lavender-pearl: #FAF7FD;
-  --color-lavender-border: #C7B6DF;
-  --color-lavender-accent: #7C58B8;
-  --color-lavender-glow: #A786DB;
-  --color-plum-ink: #4B366D;
-  --color-plum-muted: #664E88;
+  --color-sage-canvas: #EEF7F1;
+  --color-sage-mist: #E2F1E7;
+  --color-sage-pearl: #F7FCF9;
+  --color-sage-border: #BDDAC6;
+  --color-sage-accent: #45805E;
+  --color-sage-glow: #7BB895;
+  --color-forest-ink: #254736;
+  --color-forest-muted: #466B57;
 
   --font-display-ar: "Amiri", Georgia, serif;
   --font-body-ar: "Tajawal", system-ui, sans-serif;
@@ -18,8 +18,8 @@
 
 @layer base {
   html {
-    background-color: #F3EDF9;
-    color: #4B366D;
+    background-color: #EEF7F1;
+    color: #254736;
     scroll-behavior: smooth;
   }
 
@@ -28,7 +28,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #7C58B8;
+    outline: 2px solid #45805E;
     outline-offset: 3px;
   }
 }
@@ -50,7 +50,7 @@ html[lang="en"] .font-clinic-display {
   font-family: var(--font-display-en);
 }
 
-/* Lavender shimmer character-by-character reveal for Arabic (preserves cursive ligatures) */
+/* Mint-sage shimmer character-by-character reveal for Arabic (preserves cursive ligatures) */
 @keyframes reveal-rtl {
   0% {
     clip-path: inset(0 0 0 100%);
@@ -106,22 +106,22 @@ html[lang="en"] .font-clinic-display {
 @keyframes char-gold-glint {
   0% {
     opacity: 0;
-    color: #A98AE0;
-    text-shadow: 0 0 18px rgba(169, 138, 224, 0.7);
+    color: #7BB895;
+    text-shadow: 0 0 18px rgba(123, 184, 149, 0.7);
   }
   55% {
     opacity: 1;
-    color: #7D5BA8;
-    text-shadow: 0 0 12px rgba(125, 91, 168, 0.4);
+    color: #45805E;
+    text-shadow: 0 0 12px rgba(69, 128, 94, 0.4);
   }
   100% {
     opacity: 1;
-    color: #4B366D;
+    color: #254736;
     text-shadow: none;
   }
 }
 
-/* Pearl-lavender shimmer line sweep on CTA hover */
+/* Pearl-mint shimmer line sweep on CTA hover */
 .gold-shimmer-btn {
   position: relative;
   overflow: hidden;
@@ -138,9 +138,9 @@ html[lang="en"] .font-clinic-display {
   background: linear-gradient(
     110deg,
     transparent 0%,
-    rgba(250, 247, 253, 0.14) 32%,
-    rgba(250, 247, 253, 0.58) 50%,
-    rgba(214, 195, 240, 0.28) 65%,
+    rgba(247, 252, 249, 0.16) 32%,
+    rgba(247, 252, 249, 0.58) 50%,
+    rgba(195, 229, 207, 0.32) 65%,
     transparent 100%
   );
   transform: translateX(-120%) skewX(-18deg);
@@ -153,22 +153,22 @@ html[lang="en"] .font-clinic-display {
   transform: translateX(420%) skewX(-18deg);
 }
 
-/* Subtle lavender scrollbar */
+/* Subtle sage scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #EDE3F7;
+  background: #E4F2E9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C1ADE0;
+  background: #ABD0B7;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7C58B8;
+  background: #45805E;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -22,11 +22,11 @@ export function ScrollProgressBar({
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2.5px] bg-[#C7B6DF]/35"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2.5px] bg-[#BDDAC6]/40"
     >
       <motion.div
         style={{ scaleX }}
-        className={`h-full w-full bg-gradient-to-r from-[#7C58B8] via-[#A786DB] to-[#7C58B8] shadow-[0_0_8px_rgba(124,88,184,0.45)] will-change-transform ${
+        className={`h-full w-full bg-gradient-to-r from-[#45805E] via-[#7BB895] to-[#45805E] shadow-[0_0_8px_rgba(69,128,94,0.45)] will-change-transform ${
           language === 'ar' ? 'origin-right' : 'origin-left'
         }`}
       />

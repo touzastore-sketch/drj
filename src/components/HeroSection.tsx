@@ -68,7 +68,7 @@ export function HeroSection({
     <section
       id="home"
       ref={sectionRef}
-      className="relative flex min-h-[100svh] w-full items-end overflow-hidden bg-[#F3EDF9] md:items-center"
+      className="relative flex min-h-[100svh] w-full items-end overflow-hidden bg-[#EEF7F1] md:items-center"
     >
       {/* Parallax Media Layer: Static image underneath until video loads */}
       <motion.div
@@ -84,7 +84,7 @@ export function HeroSection({
             className="h-full w-full object-cover object-[72%_18%] md:object-[68%_center]"
           />
         ) : (
-          <div className="h-full w-full bg-gradient-to-br from-[#E9DFF5] via-[#F3EDF9] to-[#D6C3F0]" />
+          <div className="h-full w-full bg-gradient-to-br from-[#E2F1E7] via-[#EEF7F1] to-[#CFE6D7]" />
         )}
 
         {showVideo && (
@@ -105,24 +105,24 @@ export function HeroSection({
           </video>
         )}
 
-        {/* Soft lilac atmospheric wash harmonizing media with light-purple theme */}
+        {/* Soft mint-sage atmospheric wash harmonizing media with light-green theme */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-[#9F7ED6]/18 mix-blend-soft-light"
+          className="absolute inset-0 bg-[#7BB895]/16 mix-blend-soft-light"
         />
 
-        {/* Measured light-purple scrims: crisp behind text on left/bottom while keeping Dr. Juhainah clear on right */}
+        {/* Measured light-green scrims: crisp behind text on left/bottom while keeping Dr. Juhainah clear on right */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-[#F3EDF9] via-[#F3EDF9]/86 via-45% to-[#F3EDF9]/15 md:hidden"
+          className="absolute inset-0 bg-gradient-to-t from-[#EEF7F1] via-[#EEF7F1]/86 via-45% to-[#EEF7F1]/15 md:hidden"
         />
         <div
           aria-hidden="true"
-          className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#F3EDF9]/96 via-[#EDE3F7]/85 via-48% to-transparent"
+          className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#EEF7F1]/96 via-[#E4F2E9]/85 via-48% to-transparent"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#F3EDF9] to-transparent"
+          className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#EEF7F1] to-transparent"
         />
       </motion.div>
 
@@ -146,7 +146,7 @@ export function HeroSection({
               initial={motionPrefs.prefersReducedMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="mb-4 text-xs font-medium tracking-[0.14em] text-[#7A57AB] md:text-sm"
+              className="mb-4 text-xs font-medium tracking-[0.14em] text-[#4B7A60] md:text-sm"
             >
               {copy.eyebrow}
             </motion.p>
@@ -166,7 +166,7 @@ export function HeroSection({
                 delay: motionPrefs.lightMotion ? 0.45 : 0.75,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-5 max-w-lg text-base leading-relaxed text-[#664E88] md:mt-6 md:text-xl md:leading-[1.75]"
+              className="mt-5 max-w-lg text-base leading-relaxed text-[#466B57] md:mt-6 md:text-xl md:leading-[1.75]"
             >
               {copy.subheadline}
             </motion.p>
@@ -187,7 +187,7 @@ export function HeroSection({
 
               <a
                 href="#about"
-                className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#7A57AB] transition-colors hover:text-[#4B366D] whitespace-nowrap shrink-0"
+                className="inline-flex min-h-[44px] items-center gap-2 text-sm font-medium text-[#4B7A60] transition-colors hover:text-[#254736] whitespace-nowrap shrink-0"
               >
                 <span>{copy.scrollHint}</span>
                 <ArrowDown className="h-4 w-4" aria-hidden="true" />
@@ -203,7 +203,7 @@ export function HeroSection({
                 delay: motionPrefs.lightMotion ? 0.72 : 1.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-8 flex items-center gap-3 border-t border-[#C7B6DF] pt-6"
+              className="mt-8 flex items-center gap-3 border-t border-[#BDDAC6] pt-6"
             >
               <a
                 href={CLINIC_LINKS.instagramUrl}
@@ -211,7 +211,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 aria-label={isRtl ? 'إنستجرام د. جهينة جبابلي' : 'Instagram — Dr. Juhainah Jababili'}
                 title="@dr.juhainah"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#7C58B8] backdrop-blur-sm transition-colors duration-200 hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#BDDAC6] bg-[#F7FCF9]/85 text-[#45805E] backdrop-blur-sm transition-colors duration-200 hover:border-[#45805E] hover:bg-[#E2F1E7] hover:text-[#254736]"
               >
                 <Instagram className="h-[18px] w-[18px]" aria-hidden="true" />
               </a>
@@ -222,7 +222,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 aria-label={isRtl ? 'تيك توك د. جهينة جبابلي' : 'TikTok — Dr. Juhainah Jababili'}
                 title="@juhainahjababili"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#7C58B8] backdrop-blur-sm transition-colors duration-200 hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#BDDAC6] bg-[#F7FCF9]/85 text-[#45805E] backdrop-blur-sm transition-colors duration-200 hover:border-[#45805E] hover:bg-[#E2F1E7] hover:text-[#254736]"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -244,7 +244,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 aria-label={isRtl ? 'واتساب الحجز والتنسيق' : 'WhatsApp Booking'}
                 title="+966 57 056 0580"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#7C58B8] backdrop-blur-sm transition-colors duration-200 hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#BDDAC6] bg-[#F7FCF9]/85 text-[#45805E] backdrop-blur-sm transition-colors duration-200 hover:border-[#45805E] hover:bg-[#E2F1E7] hover:text-[#254736]"
               >
                 <MessageCircle className="h-[18px] w-[18px]" aria-hidden="true" />
               </a>
@@ -255,7 +255,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 aria-label={isRtl ? 'موقع العيادة على خرائط جوجل' : 'Clinic Location on Google Maps'}
                 title={isRtl ? 'عيادة اللمسة الطبي — الرياض' : 'Touch Medical Clinic — Riyadh'}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#7C58B8] backdrop-blur-sm transition-colors duration-200 hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#BDDAC6] bg-[#F7FCF9]/85 text-[#45805E] backdrop-blur-sm transition-colors duration-200 hover:border-[#45805E] hover:bg-[#E2F1E7] hover:text-[#254736]"
               >
                 <MapPin className="h-[18px] w-[18px]" aria-hidden="true" />
               </a>

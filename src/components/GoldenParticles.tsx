@@ -17,10 +17,10 @@ interface Particle {
   color: string;
 }
 
-const LAVENDER_PALETTE = [
-  'rgba(124, 88, 184, ',  // #7C58B8 Royal Lavender
-  'rgba(167, 134, 219, ', // #A786DB Soft Lilac
-  'rgba(250, 247, 253, ', // #FAF7FD Pearl Light
+const SAGE_PALETTE = [
+  'rgba(69, 128, 94, ',   // #45805E Eucalyptus Sage
+  'rgba(123, 184, 149, ', // #7BB895 Pastel Mint Glow
+  'rgba(247, 252, 249, ', // #F7FCF9 Pearl Mint Light
 ];
 
 export function GoldenParticles({ lightMotion, prefersReducedMotion }: GoldenParticlesProps) {
@@ -64,7 +64,7 @@ export function GoldenParticles({ lightMotion, prefersReducedMotion }: GoldenPar
       alpha: 0.2 + Math.random() * 0.45,
       alphaPhase: Math.random() * Math.PI * 2,
       alphaSpeed: 0.008 + Math.random() * 0.015,
-      color: LAVENDER_PALETTE[Math.floor(Math.random() * LAVENDER_PALETTE.length)],
+      color: SAGE_PALETTE[Math.floor(Math.random() * SAGE_PALETTE.length)],
     }));
 
     const render = () => {

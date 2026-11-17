@@ -57,15 +57,15 @@ export function ServicesSection({
     <section
       id="services"
       ref={sectionRef}
-      className="relative overflow-hidden border-t border-[#C7B6DF]/70 bg-[#EDE3F7] py-20 md:py-28"
+      className="relative overflow-hidden border-t border-[#BDDAC6]/70 bg-[#E4F2E9] py-20 md:py-28"
     >
-      {/* Background cosmetic tools & serums video with soft light-lavender atmospheric veil */}
+      {/* Background cosmetic tools & serums video with soft light-mint atmospheric veil */}
       <motion.div
         style={{ y: bgY }}
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 scale-[1.12] will-change-transform"
       >
-        <div className="h-full w-full bg-[radial-gradient(ellipse_at_top,#F3EDF9_0%,#E9DFF5_65%,#DDD0F0_100%)]" />
+        <div className="h-full w-full bg-[radial-gradient(ellipse_at_top,#EEF7F1_0%,#E2F1E7_65%,#D3E8DA_100%)]" />
 
         {showVideo && (
           <video
@@ -84,9 +84,9 @@ export function ServicesSection({
           </video>
         )}
 
-        {/* Measured light-lavender veil for cohesive palette & >=4.5:1 text legibility */}
-        <div className="absolute inset-0 bg-[#F3EDF9]/72 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F3EDF9] via-[#EDE3F7]/45 to-[#F3EDF9]" />
+        {/* Measured light-mint veil for cohesive palette & >=4.5:1 text legibility */}
+        <div className="absolute inset-0 bg-[#EEF7F1]/72 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#EEF7F1] via-[#E4F2E9]/45 to-[#EEF7F1]" />
       </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-10">
@@ -97,13 +97,13 @@ export function ServicesSection({
           transition={{ duration: motionPrefs.lightMotion ? 0.45 : 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 max-w-2xl md:mb-10"
         >
-          <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#7A57AB] md:text-sm">
+          <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#4B7A60] md:text-sm">
             {copy.eyebrow}
           </p>
-          <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#4B366D] [text-wrap:balance]">
+          <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#254736] [text-wrap:balance]">
             {copy.heading}
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-[#664E88] md:text-base">
+          <p className="mt-4 text-sm leading-relaxed text-[#466B57] md:text-base">
             {copy.subtitle}
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ export function ServicesSection({
         <div
           role="tablist"
           aria-label={copy.eyebrow}
-          className="mb-9 flex flex-wrap items-center gap-2 border-b border-[#C7B6DF] pb-5"
+          className="mb-9 flex flex-wrap items-center gap-2 border-b border-[#BDDAC6] pb-5"
         >
           {copy.categories.map((category) => {
             const isActive = activeCategory === category.id;
@@ -125,8 +125,8 @@ export function ServicesSection({
                 onClick={() => setActiveCategory(category.id)}
                 className={`min-h-[40px] rounded-sm px-4 py-2 text-xs font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer md:text-sm ${
                   isActive
-                    ? 'bg-[#7C58B8] text-[#FAF7FD]'
-                    : 'border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#664E88] hover:border-[#7C58B8] hover:text-[#4B366D]'
+                    ? 'bg-[#45805E] text-[#F7FCF9]'
+                    : 'border border-[#BDDAC6] bg-[#F7FCF9]/85 text-[#466B57] hover:border-[#45805E] hover:text-[#254736]'
                 }`}
               >
                 {category.label}

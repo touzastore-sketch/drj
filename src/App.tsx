@@ -57,7 +57,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F3EDF9] text-[#4B366D]">
+    <div className="min-h-screen bg-[#EEF7F1] text-[#254736]">
       <ScrollProgressBar
         language={language}
         prefersReducedMotion={motionPrefs.prefersReducedMotion}

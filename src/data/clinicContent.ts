@@ -131,6 +131,7 @@ export const MEDIA_ASSETS = {
   heroVideo:
     '/assets/aistudio/openart-02179485667270500000000000000000000ffffc0a8a270a5f6f2_1794856801265_f4c2d343_99110d91.mp4',
   heroPoster: '/assets/aistudio/image_db5a8163.png',
+  aboutPortrait: '/assets/aistudio/image_4722ca77.png',
   servicesVideo:
     '/assets/aistudio/openart-02179485653277500000000000000000000ffffc0a8b42915895c_1794856662875_37ca1541_a7858150.mp4',
 };
