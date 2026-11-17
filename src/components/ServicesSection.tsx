@@ -57,15 +57,15 @@ export function ServicesSection({
     <section
       id="services"
       ref={sectionRef}
-      className="relative overflow-hidden border-t border-[#96805C]/20 bg-[#352A1A] py-20 md:py-28"
+      className="relative overflow-hidden border-t border-[#C7B6DF]/70 bg-[#EDE3F7] py-20 md:py-28"
     >
-      {/* Background cosmetic tools & serums video with parallax and measured scrim */}
+      {/* Background cosmetic tools & serums video with soft light-lavender atmospheric veil */}
       <motion.div
         style={{ y: bgY }}
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 scale-[1.12] will-change-transform"
       >
-        <div className="h-full w-full bg-[radial-gradient(ellipse_at_top,#5F492E_0%,#352A1A_65%,#292013_100%)]" />
+        <div className="h-full w-full bg-[radial-gradient(ellipse_at_top,#F3EDF9_0%,#E9DFF5_65%,#DDD0F0_100%)]" />
 
         {showVideo && (
           <video
@@ -77,15 +77,16 @@ export function ServicesSection({
             onCanPlay={() => setVideoReady(true)}
             onPlaying={() => setVideoReady(true)}
             className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-              videoReady ? 'opacity-100' : 'opacity-0'
+              videoReady ? 'opacity-45' : 'opacity-0'
             }`}
           >
             <source src={MEDIA_ASSETS.servicesVideo} type="video/mp4" />
           </video>
         )}
 
-        <div className="absolute inset-0 bg-[#352A1A]/78" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#352A1A] via-[#352A1A]/35 to-[#352A1A]" />
+        {/* Measured light-lavender veil for cohesive palette & >=4.5:1 text legibility */}
+        <div className="absolute inset-0 bg-[#F3EDF9]/72 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F3EDF9] via-[#EDE3F7]/45 to-[#F3EDF9]" />
       </motion.div>
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-10">
@@ -96,13 +97,13 @@ export function ServicesSection({
           transition={{ duration: motionPrefs.lightMotion ? 0.45 : 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-8 max-w-2xl md:mb-10"
         >
-          <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#C0A184] md:text-sm">
+          <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#7A57AB] md:text-sm">
             {copy.eyebrow}
           </p>
-          <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#F4EDE6] [text-wrap:balance]">
+          <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#4B366D] [text-wrap:balance]">
             {copy.heading}
           </h2>
-          <p className="mt-4 text-sm leading-relaxed text-[#F4EDE6]/80 md:text-base">
+          <p className="mt-4 text-sm leading-relaxed text-[#664E88] md:text-base">
             {copy.subtitle}
           </p>
         </motion.div>
@@ -111,7 +112,7 @@ export function ServicesSection({
         <div
           role="tablist"
           aria-label={copy.eyebrow}
-          className="mb-9 flex flex-wrap items-center gap-2 border-b border-[#96805C]/25 pb-5"
+          className="mb-9 flex flex-wrap items-center gap-2 border-b border-[#C7B6DF] pb-5"
         >
           {copy.categories.map((category) => {
             const isActive = activeCategory === category.id;
@@ -124,8 +125,8 @@ export function ServicesSection({
                 onClick={() => setActiveCategory(category.id)}
                 className={`min-h-[40px] rounded-sm px-4 py-2 text-xs font-medium transition-colors whitespace-nowrap shrink-0 cursor-pointer md:text-sm ${
                   isActive
-                    ? 'bg-[#96805C] text-[#352A1A]'
-                    : 'border border-[#96805C]/30 bg-[#352A1A]/65 text-[#F4EDE6]/85 hover:border-[#C0A184] hover:text-[#F4EDE6]'
+                    ? 'bg-[#7C58B8] text-[#FAF7FD]'
+                    : 'border border-[#C7B6DF] bg-[#FAF7FD]/85 text-[#664E88] hover:border-[#7C58B8] hover:text-[#4B366D]'
                 }`}
               >
                 {category.label}

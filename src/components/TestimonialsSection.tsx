@@ -41,12 +41,11 @@ export function TestimonialsSection({
   return (
     <section
       id="testimonials"
-      className="relative overflow-hidden border-t border-[#96805C]/20 bg-[#352A1A] py-20 md:py-28"
+      className="relative overflow-hidden border-t border-[#C7B6DF]/70 bg-[#F3EDF9] py-20 md:py-28"
     >
-      {/* Subtle warm radial light matching clinic plaster warmth */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(95,73,46,0.22)_0%,transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(199,182,223,0.32)_0%,transparent_70%)]"
       />
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-10">
@@ -58,13 +57,13 @@ export function TestimonialsSection({
             transition={{ duration: motionPrefs.lightMotion ? 0.45 : 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl"
           >
-            <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#C0A184] md:text-sm">
+            <p className="mb-3 text-xs font-medium tracking-[0.14em] text-[#7A57AB] md:text-sm">
               {copy.eyebrow}
             </p>
-            <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#F4EDE6] [text-wrap:balance]">
+            <h2 className="font-clinic-display text-[clamp(1.85rem,3vw,2.75rem)] leading-[1.25] font-bold text-[#4B366D] [text-wrap:balance]">
               {copy.heading}
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-[#F4EDE6]/80 md:text-base">
+            <p className="mt-4 text-sm leading-relaxed text-[#664E88] md:text-base">
               {copy.subtitle}
             </p>
           </motion.div>
@@ -75,12 +74,12 @@ export function TestimonialsSection({
               type="button"
               onClick={handlePrev}
               aria-label={copy.prevLabel}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/45 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:bg-[#5F492E]/65 hover:text-[#F4EDE6] cursor-pointer"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D] cursor-pointer"
             >
               <PrevIcon className="h-5 w-5" aria-hidden="true" />
             </button>
 
-            <span className="min-w-[44px] text-center font-mono text-xs text-[#C0A184] tabular-nums">
+            <span className="min-w-[44px] text-center font-mono text-xs font-medium text-[#664E88] tabular-nums">
               {String(pageIndex + 1).padStart(2, '0')} / {String(totalPages).padStart(2, '0')}
             </span>
 
@@ -88,7 +87,7 @@ export function TestimonialsSection({
               type="button"
               onClick={handleNext}
               aria-label={copy.nextLabel}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/45 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:bg-[#5F492E]/65 hover:text-[#F4EDE6] cursor-pointer"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5] hover:text-[#4B366D] cursor-pointer"
             >
               <NextIcon className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -108,28 +107,28 @@ export function TestimonialsSection({
             {visibleItems.map((item) => (
               <article
                 key={item.id}
-                className="flex h-full flex-col justify-between rounded-sm border border-[#96805C]/30 bg-[#5F492E]/25 p-7 backdrop-blur-sm md:p-8"
+                className="flex h-full flex-col justify-between rounded-sm border border-[#C7B6DF] bg-[#FAF7FD]/90 p-7 shadow-sm md:p-8"
               >
                 <div>
                   <Quote
-                    className="mb-5 h-6 w-6 text-[#96805C]/80"
+                    className="mb-5 h-6 w-6 text-[#9F7ED6]"
                     aria-hidden="true"
                   />
-                  <blockquote className="text-base leading-[1.85] text-[#F4EDE6]/90 md:text-[17px]">
+                  <blockquote className="text-base leading-[1.85] text-[#4B366D]/90 md:text-[17px]">
                     “{item.quote}”
                   </blockquote>
                 </div>
 
-                <footer className="mt-7 border-t border-[#96805C]/25 pt-5">
-                  <p className="font-clinic-display text-xl font-bold text-[#F4EDE6]">
+                <footer className="mt-7 border-t border-[#C7B6DF]/70 pt-5">
+                  <p className="font-clinic-display text-xl font-bold text-[#4B366D]">
                     {item.patientName}
                   </p>
-                  <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#C0A184] md:text-sm">
+                  <div className="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs text-[#7A57AB] md:text-sm">
                     <span>{item.treatment}</span>
-                    <span aria-hidden="true" className="text-[#96805C]">
+                    <span aria-hidden="true" className="text-[#9F7ED6]">
                       ·
                     </span>
-                    <span className="text-[#C0A184]/80">{item.visitContext}</span>
+                    <span className="text-[#664E88]">{item.visitContext}</span>
                   </div>
                 </footer>
               </article>
@@ -137,7 +136,7 @@ export function TestimonialsSection({
           </motion.div>
         </AnimatePresence>
 
-        {/* Subtle Progress Dots / Bars */}
+        {/* Subtle Progress Bars */}
         <div
           className="mt-8 flex items-center justify-center gap-2"
           role="tablist"
@@ -155,8 +154,8 @@ export function TestimonialsSection({
                 onClick={() => setPageIndex(idx)}
                 className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                   isActive
-                    ? 'w-8 bg-[#C0A184]'
-                    : 'w-2.5 bg-[#96805C]/40 hover:bg-[#96805C]'
+                    ? 'w-8 bg-[#7C58B8]'
+                    : 'w-2.5 bg-[#C7B6DF] hover:bg-[#9F7ED6]'
                 }`}
               />
             );

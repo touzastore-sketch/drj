@@ -82,8 +82,8 @@ export function TiltServiceCard({
         }}
         className={`group relative flex h-full w-full flex-col justify-between overflow-hidden rounded-sm border p-6 text-start backdrop-blur-md transition-colors md:p-7 ${
           isSelected
-            ? 'border-[#C0A184] bg-[#5F492E]/80'
-            : 'border-[#96805C]/30 bg-[#352A1A]/80 hover:border-[#C0A184]/75 hover:bg-[#5F492E]/55'
+            ? 'border-[#7C58B8] bg-[#E9DFF5]/95 shadow-sm'
+            : 'border-[#C7B6DF] bg-[#FAF7FD]/88 hover:border-[#7C58B8] hover:bg-[#F5EFFC]/95'
         }`}
       >
         {!lightMotion && (
@@ -92,14 +92,14 @@ export function TiltServiceCard({
             className="pointer-events-none absolute inset-0 transition-opacity duration-200"
             style={{
               opacity: isHovered ? 1 : 0,
-              background: `radial-gradient(280px circle at ${tilt.glowX}% ${tilt.glowY}%, rgba(192, 161, 132, 0.16), transparent 65%)`,
+              background: `radial-gradient(280px circle at ${tilt.glowX}% ${tilt.glowY}%, rgba(159, 126, 214, 0.2), transparent 65%)`,
             }}
           />
         )}
 
         <div className="relative z-10">
           <div className="mb-4 flex items-center justify-between gap-3">
-            <span className="font-mono text-xs tracking-widest text-[#C0A184] tabular-nums">
+            <span className="font-mono text-xs font-medium tracking-widest text-[#7C58B8] tabular-nums">
               {service.number}
             </span>
 
@@ -108,8 +108,8 @@ export function TiltServiceCard({
               onClick={() => onSelect(service)}
               className={`inline-flex min-h-[32px] items-center gap-1.5 text-xs transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
                 isSelected
-                  ? 'font-medium text-[#C0A184]'
-                  : 'text-[#C0A184]/75 hover:text-[#F4EDE6]'
+                  ? 'font-semibold text-[#7A57AB]'
+                  : 'text-[#664E88] hover:text-[#4B366D]'
               }`}
             >
               {isSelected ? (
@@ -123,26 +123,26 @@ export function TiltServiceCard({
             </button>
           </div>
 
-          <h3 className="font-clinic-display mb-2.5 text-[1.4rem] leading-snug font-bold text-[#F4EDE6]">
+          <h3 className="font-clinic-display mb-2.5 text-[1.4rem] leading-snug font-bold text-[#4B366D]">
             {service.title}
           </h3>
 
-          <p className="text-sm leading-relaxed text-[#F4EDE6]/80">
+          <p className="text-sm leading-relaxed text-[#664E88]">
             {service.description}
           </p>
         </div>
 
-        <div className="relative z-10 mt-6 border-t border-[#96805C]/25 pt-4">
+        <div className="relative z-10 mt-6 border-t border-[#C7B6DF]/70 pt-4">
           <button
             type="button"
             onClick={() => onBookService(service)}
-            className="inline-flex min-h-[40px] w-full items-center justify-between gap-2 text-xs font-medium text-[#C0A184] transition-colors hover:text-[#F4EDE6] cursor-pointer md:text-sm"
+            className="inline-flex min-h-[40px] w-full items-center justify-between gap-2 text-xs font-semibold text-[#7A57AB] transition-colors hover:text-[#4B366D] cursor-pointer md:text-sm"
           >
             <span className="inline-flex items-center gap-2 whitespace-nowrap">
               <MessageCircle className="h-4 w-4 shrink-0" aria-hidden="true" />
               <span>{directWhatsappHint}</span>
             </span>
-            <span aria-hidden="true" className="text-[#96805C] transition-transform duration-200 group-hover:translate-x-0.5">
+            <span aria-hidden="true" className="text-[#7C58B8] transition-transform duration-200 group-hover:translate-x-0.5">
               {language === 'ar' ? '←' : '→'}
             </span>
           </button>

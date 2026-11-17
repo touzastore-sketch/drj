@@ -86,15 +86,15 @@ export function Navbar({
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
           scrolled
-            ? 'border-b border-[#96805C]/25 bg-[#352A1A]/90 backdrop-blur-md'
-            : 'border-b border-transparent bg-gradient-to-b from-[#352A1A]/75 to-transparent'
+            ? 'border-b border-[#C7B6DF]/70 bg-[#F3EDF9]/90 backdrop-blur-md'
+            : 'border-b border-transparent bg-gradient-to-b from-[#F3EDF9]/90 via-[#F3EDF9]/65 to-transparent backdrop-blur-[2px]'
         }`}
       >
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-3 md:gap-8 md:px-10 md:py-4">
           {/* Zone 1: Single-line brand wordmark */}
           <a
             href="#home"
-            className="font-clinic-display text-xl font-bold tracking-tight text-[#F4EDE6] transition-colors hover:text-[#C0A184] whitespace-nowrap shrink-0 md:text-2xl"
+            className="font-clinic-display text-xl font-bold tracking-tight text-[#4B366D] transition-colors hover:text-[#7C58B8] whitespace-nowrap shrink-0 md:text-2xl"
           >
             {copy.brand}
           </a>
@@ -102,13 +102,13 @@ export function Navbar({
           {/* Zone 2: Desktop single-line nav links */}
           <nav
             aria-label={isRtl ? 'التنقل الرئيسي' : 'Primary navigation'}
-            className="hidden items-center gap-7 text-sm font-medium text-[#F4EDE6]/85 md:flex"
+            className="hidden items-center gap-7 text-sm font-medium text-[#4B366D]/85 md:flex"
           >
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="relative py-1 transition-colors hover:text-[#C0A184] whitespace-nowrap shrink-0"
+                className="relative py-1 transition-colors hover:text-[#7C58B8] whitespace-nowrap shrink-0"
               >
                 {item.label}
               </a>
@@ -121,7 +121,7 @@ export function Navbar({
               type="button"
               onClick={onToggleLanguage}
               aria-label={copy.nav.langAria}
-              className="inline-flex min-h-[40px] items-center justify-center rounded-sm border border-[#96805C]/40 px-3 py-1.5 text-xs font-medium tracking-wider text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6] whitespace-nowrap shrink-0 cursor-pointer"
+              className="inline-flex min-h-[40px] items-center justify-center rounded-sm border border-[#B49FD3] bg-[#FAF7FD]/80 px-3 py-1.5 text-xs font-medium tracking-wider text-[#664E88] transition-colors hover:border-[#7C58B8] hover:text-[#4B366D] whitespace-nowrap shrink-0 cursor-pointer"
             >
               {copy.nav.langToggle}
             </button>
@@ -129,7 +129,7 @@ export function Navbar({
             <button
               type="button"
               onClick={onOpenBooking}
-              className="hidden min-h-[40px] items-center justify-center rounded-sm bg-[#96805C] px-4 py-2 text-xs font-semibold text-[#352A1A] transition-colors hover:bg-[#C0A184] whitespace-nowrap shrink-0 cursor-pointer md:inline-flex"
+              className="hidden min-h-[40px] items-center justify-center rounded-sm bg-[#7C58B8] px-4 py-2 text-xs font-semibold text-[#FAF7FD] transition-colors hover:bg-[#6B47A6] whitespace-nowrap shrink-0 cursor-pointer md:inline-flex"
             >
               {copy.nav.bookCta}
             </button>
@@ -140,7 +140,7 @@ export function Navbar({
               aria-expanded={mobileOpen}
               aria-controls="mobile-sidebar"
               aria-label={isRtl ? 'فتح القائمة الجانبية' : 'Open navigation menu'}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/45 bg-[#352A1A]/75 text-[#F4EDE6] transition-colors hover:border-[#C0A184] hover:text-[#C0A184] md:hidden cursor-pointer"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#B49FD3] bg-[#FAF7FD]/85 text-[#4B366D] transition-colors hover:border-[#7C58B8] hover:text-[#7C58B8] md:hidden cursor-pointer"
             >
               <Menu className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -165,7 +165,7 @@ export function Navbar({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.22 }}
               onClick={() => setMobileOpen(false)}
-              className="fixed inset-0 bg-[#1B150D]/75 backdrop-blur-sm"
+              className="fixed inset-0 bg-[#4B366D]/45 backdrop-blur-sm"
             />
 
             {/* Sidebar Panel */}
@@ -177,45 +177,42 @@ export function Navbar({
               transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
               className={`fixed inset-y-0 ${
                 isRtl ? 'right-0 border-l' : 'left-0 border-r'
-              } flex w-[84vw] max-w-[330px] flex-col justify-between border-[#96805C]/30 bg-[#352A1A] p-6 shadow-2xl`}
+              } flex w-[84vw] max-w-[330px] flex-col justify-between border-[#C7B6DF] bg-[#F3EDF9] p-6 shadow-2xl`}
             >
               <div>
-                {/* Drawer Header */}
-                <div className="flex items-center justify-between border-b border-[#96805C]/25 pb-4">
-                  <span className="font-clinic-display text-xl font-bold text-[#F4EDE6]">
+                <div className="flex items-center justify-between border-b border-[#C7B6DF]/70 pb-4">
+                  <span className="font-clinic-display text-xl font-bold text-[#4B366D]">
                     {copy.brand}
                   </span>
                   <button
                     type="button"
                     onClick={() => setMobileOpen(false)}
                     aria-label={isRtl ? 'إغلاق القائمة' : 'Close menu'}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6] cursor-pointer"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#664E88] transition-colors hover:border-[#7C58B8] hover:text-[#4B366D] cursor-pointer"
                   >
                     <X className="h-5 w-5" aria-hidden="true" />
                   </button>
                 </div>
 
-                {/* Drawer Navigation Links */}
                 <nav
                   aria-label={isRtl ? 'روابط الأقسام' : 'Section links'}
-                  className="mt-6 flex flex-col divide-y divide-[#96805C]/15"
+                  className="mt-6 flex flex-col divide-y divide-[#C7B6DF]/50"
                 >
                   {navItems.map((item) => (
                     <button
                       key={item.id}
                       type="button"
                       onClick={() => handleNavClick(item.id)}
-                      className="flex min-h-[48px] w-full items-center justify-between py-3 text-start text-base font-medium text-[#F4EDE6] transition-colors hover:text-[#C0A184] cursor-pointer"
+                      className="flex min-h-[48px] w-full items-center justify-between py-3 text-start text-base font-medium text-[#4B366D] transition-colors hover:text-[#7C58B8] cursor-pointer"
                     >
                       <span>{item.label}</span>
-                      <span aria-hidden="true" className="text-xs text-[#96805C]">
+                      <span aria-hidden="true" className="text-xs text-[#7C58B8]">
                         {isRtl ? '←' : '→'}
                       </span>
                     </button>
                   ))}
                 </nav>
 
-                {/* Primary Actions inside Sidebar */}
                 <div className="mt-7 space-y-3">
                   <GoldShimmerButton
                     as="button"
@@ -233,7 +230,7 @@ export function Navbar({
                   <button
                     type="button"
                     onClick={() => handleNavClick('contact')}
-                    className="inline-flex min-h-[44px] w-full items-center justify-center rounded-sm border border-[#96805C]/50 bg-[#5F492E]/40 px-5 py-3 text-sm font-medium text-[#F4EDE6] transition-colors hover:border-[#C0A184] hover:bg-[#5F492E]/70 cursor-pointer"
+                    className="inline-flex min-h-[44px] w-full items-center justify-center rounded-sm border border-[#B49FD3] bg-[#E9DFF5] px-5 py-3 text-sm font-medium text-[#4B366D] transition-colors hover:border-[#7C58B8] hover:bg-[#DFD0F2] cursor-pointer"
                   >
                     {copy.nav.contact}
                   </button>
@@ -244,7 +241,7 @@ export function Navbar({
                       onToggleLanguage();
                       setMobileOpen(false);
                     }}
-                    className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-sm border border-[#96805C]/30 px-4 py-2.5 text-xs font-medium text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6] cursor-pointer"
+                    className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] px-4 py-2.5 text-xs font-medium text-[#664E88] transition-colors hover:border-[#7C58B8] hover:text-[#4B366D] cursor-pointer"
                   >
                     <Globe className="h-4 w-4" aria-hidden="true" />
                     <span>{isRtl ? 'Switch to English' : 'التبديل إلى العربية'}</span>
@@ -252,9 +249,8 @@ export function Navbar({
                 </div>
               </div>
 
-              {/* Drawer Footer: Social & Direct Contact Buttons */}
-              <div className="border-t border-[#96805C]/25 pt-5">
-                <p className="mb-3 text-xs text-[#C0A184]">
+              <div className="border-t border-[#C7B6DF]/70 pt-5">
+                <p className="mb-3 text-xs text-[#664E88]">
                   {isRtl ? 'تواصلي معنا مباشرة' : 'Connect directly'}
                 </p>
 
@@ -264,7 +260,7 @@ export function Navbar({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/40 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6]"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5]"
                   >
                     <Instagram className="h-[18px] w-[18px]" aria-hidden="true" />
                   </a>
@@ -274,7 +270,7 @@ export function Navbar({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="TikTok"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/40 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6]"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5]"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -293,7 +289,7 @@ export function Navbar({
                   <a
                     href={CLINIC_LINKS.phoneHref}
                     aria-label={isRtl ? 'الاتصال بالمنسقة' : 'Call coordinator'}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/40 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6]"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5]"
                   >
                     <Phone className="h-[18px] w-[18px]" aria-hidden="true" />
                   </a>
@@ -303,7 +299,7 @@ export function Navbar({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={isRtl ? 'موقع العيادة' : 'Clinic location'}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#96805C]/40 bg-[#5F492E]/35 text-[#C0A184] transition-colors hover:border-[#C0A184] hover:text-[#F4EDE6]"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[#C7B6DF] bg-[#FAF7FD] text-[#7C58B8] transition-colors hover:border-[#7C58B8] hover:bg-[#E9DFF5]"
                   >
                     <MapPin className="h-[18px] w-[18px]" aria-hidden="true" />
                   </a>

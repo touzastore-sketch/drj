@@ -19,15 +19,13 @@ export function ShimmerHeadline({
     return (
       <h1
         dir={isRtl ? 'rtl' : 'ltr'}
-        className="font-clinic-display text-[clamp(2.35rem,4.4vw,4rem)] leading-[1.18] font-bold tracking-tight text-[#F4EDE6] [text-wrap:balance]"
+        className="font-clinic-display text-[clamp(2.35rem,4.4vw,4rem)] leading-[1.18] font-bold tracking-tight text-[#4B366D] [text-wrap:balance]"
       >
         {text}
       </h1>
     );
   }
 
-  // For Arabic: keep cursive ligatures 100% unbroken inside a single text node,
-  // while revealing letter-by-letter across the width with a golden shimmer sweep.
   if (isRtl) {
     const charSteps = Math.max(text.replace(/\s+/g, '').length, 18);
     const duration = lightMotion ? '1.35s' : '1.75s';
@@ -36,30 +34,29 @@ export function ShimmerHeadline({
       <h1
         key={`ar-${text}`}
         dir="rtl"
-        className="font-clinic-display relative inline-block text-[clamp(2.35rem,4.4vw,4rem)] leading-[1.2] font-bold text-[#F4EDE6] [text-wrap:balance]"
+        className="font-clinic-display relative inline-block text-[clamp(2.35rem,4.4vw,4rem)] leading-[1.2] font-bold text-[#4B366D] [text-wrap:balance]"
         aria-label={text}
       >
-        {/* Invisible layout anchor */}
         <span className="opacity-0 select-none" aria-hidden="true">
           {text}
         </span>
 
-        {/* Warm golden under-glow layer revealing ahead of the ivory finish */}
+        {/* Soft lilac shimmer layer revealing ahead */}
         <span
           aria-hidden="true"
-          className="absolute inset-0 text-[#C0A184]"
+          className="absolute inset-0 text-[#9B79D1]"
           style={{
-            textShadow: '0 0 22px rgba(192, 161, 132, 0.55)',
+            textShadow: '0 0 20px rgba(169, 138, 224, 0.55)',
             animation: `reveal-rtl ${duration} steps(${charSteps}, end) 0.12s both`,
           }}
         >
           {text}
         </span>
 
-        {/* Crisp ivory foreground finishing each letter cleanly */}
+        {/* Soft royal-plum foreground finishing each letter cleanly */}
         <span
           aria-hidden="true"
-          className="absolute inset-0 text-[#F4EDE6]"
+          className="absolute inset-0 text-[#4B366D]"
           style={{
             animation: `reveal-rtl ${duration} steps(${charSteps}, end) 0.22s both`,
           }}
@@ -67,13 +64,13 @@ export function ShimmerHeadline({
           {text}
         </span>
 
-        {/* Traveling golden shimmer beam across the headline */}
+        {/* Traveling lavender light beam across the headline */}
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 overflow-hidden"
         >
           <span
-            className="block h-full w-1/3 bg-gradient-to-l from-transparent via-[#C0A184]/45 to-transparent blur-md"
+            className="block h-full w-1/3 bg-gradient-to-l from-transparent via-[#B89BE8]/50 to-transparent blur-md"
             style={{
               animation: `gold-beam-rtl ${lightMotion ? '1.6s' : '2.05s'} cubic-bezier(0.22, 1, 0.36, 1) 0.12s both`,
             }}
@@ -83,7 +80,6 @@ export function ShimmerHeadline({
     );
   }
 
-  // For English: per-character sequential golden glint preserving natural word wrapping
   const words = text.split(' ');
   let charCounter = 0;
 
@@ -91,7 +87,7 @@ export function ShimmerHeadline({
     <h1
       key={`en-${text}`}
       dir="ltr"
-      className="font-clinic-display text-[clamp(2.35rem,4.3vw,3.9rem)] leading-[1.12] font-semibold tracking-tight text-[#F4EDE6] [text-wrap:balance]"
+      className="font-clinic-display text-[clamp(2.35rem,4.3vw,3.9rem)] leading-[1.12] font-semibold tracking-tight text-[#4B366D] [text-wrap:balance]"
       aria-label={text}
     >
       {words.map((word, wordIdx) => {

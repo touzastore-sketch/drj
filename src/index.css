@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-espresso: #352A1A;
-  --color-warm-brown: #5F492E;
-  --color-gold: #96805C;
-  --color-olive: #706033;
-  --color-sand: #C0A184;
-  --color-ivory: #F4EDE6;
+  --color-lavender-canvas: #F3EDF9;
+  --color-lavender-mist: #E9DFF5;
+  --color-lavender-pearl: #FAF7FD;
+  --color-lavender-border: #C7B6DF;
+  --color-lavender-accent: #7C58B8;
+  --color-lavender-glow: #A786DB;
+  --color-plum-ink: #4B366D;
+  --color-plum-muted: #664E88;
 
   --font-display-ar: "Amiri", Georgia, serif;
   --font-body-ar: "Tajawal", system-ui, sans-serif;
@@ -16,8 +18,8 @@
 
 @layer base {
   html {
-    background-color: #352A1A;
-    color: #F4EDE6;
+    background-color: #F3EDF9;
+    color: #4B366D;
     scroll-behavior: smooth;
   }
 
@@ -26,7 +28,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #C0A184;
+    outline: 2px solid #7C58B8;
     outline-offset: 3px;
   }
 }
@@ -48,7 +50,7 @@ html[lang="en"] .font-clinic-display {
   font-family: var(--font-display-en);
 }
 
-/* Golden character-by-character shimmer reveal for Arabic (preserves cursive ligatures) */
+/* Lavender shimmer character-by-character reveal for Arabic (preserves cursive ligatures) */
 @keyframes reveal-rtl {
   0% {
     clip-path: inset(0 0 0 100%);
@@ -104,22 +106,22 @@ html[lang="en"] .font-clinic-display {
 @keyframes char-gold-glint {
   0% {
     opacity: 0;
-    color: #C0A184;
-    text-shadow: 0 0 18px rgba(192, 161, 132, 0.75);
+    color: #A98AE0;
+    text-shadow: 0 0 18px rgba(169, 138, 224, 0.7);
   }
   55% {
     opacity: 1;
-    color: #F4EDE6;
-    text-shadow: 0 0 14px rgba(150, 128, 92, 0.55);
+    color: #7D5BA8;
+    text-shadow: 0 0 12px rgba(125, 91, 168, 0.4);
   }
   100% {
     opacity: 1;
-    color: #F4EDE6;
+    color: #4B366D;
     text-shadow: none;
   }
 }
 
-/* Golden shimmer line sweep on CTA hover */
+/* Pearl-lavender shimmer line sweep on CTA hover */
 .gold-shimmer-btn {
   position: relative;
   overflow: hidden;
@@ -136,9 +138,9 @@ html[lang="en"] .font-clinic-display {
   background: linear-gradient(
     110deg,
     transparent 0%,
-    rgba(244, 237, 230, 0.08) 32%,
-    rgba(244, 237, 230, 0.52) 50%,
-    rgba(192, 161, 132, 0.2) 65%,
+    rgba(250, 247, 253, 0.14) 32%,
+    rgba(250, 247, 253, 0.58) 50%,
+    rgba(214, 195, 240, 0.28) 65%,
     transparent 100%
   );
   transform: translateX(-120%) skewX(-18deg);
@@ -151,22 +153,22 @@ html[lang="en"] .font-clinic-display {
   transform: translateX(420%) skewX(-18deg);
 }
 
-/* Subtle scrollbar */
+/* Subtle lavender scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #352A1A;
+  background: #EDE3F7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5F492E;
+  background: #C1ADE0;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #96805C;
+  background: #7C58B8;
 }
 
 @media (prefers-reduced-motion: reduce) {
